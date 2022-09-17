@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         submitButton.setOnClickListener{
             val editText = findViewById<EditText>(R.id.cardName)
             val intent = Intent(this@MainActivity, Activity2::class.java)
-            intent.putExtra("cardName", editText.toString())
+            intent.putExtra("cardName", editText.text.toString())
             startActivity(intent)
         }
     }
